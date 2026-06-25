@@ -1,0 +1,26 @@
+class Institucion {
+  constructor(nombre) {
+    this.nombre = nombre;
+    this.cursos = [];
+    this.alumnos = [];
+    this.profesores = [];
+  }
+
+  agregarCurso(curso) {
+    this.cursos.push(curso);
+  }
+
+  agregarAlumno(alumno) {
+    this.alumnos.push(alumno);
+  }
+
+  agregarProfesor(profesor) {
+    this.profesores.push(profesor);
+  }
+
+  inscribirAlumno(alumno, curso) {
+    curso.agregarAlumno(alumno);
+  }
+}
+
+module.exports = Institucion;
